@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <article class="form-container">
+        <i class="fa-solid fa-user fa-3x"></i>
+        <form>
+            <div class="form-control">
+                <input type="text" id="email" required/>
+                <label for="email">Email</label>
+            </div>
+
+            <div class="form-control">
+                <input type="password" id ="password" required/>
+                <label for="password">Password</label>
+                <button class="seeBtn"><i class="fa-solid fa-eye"></i></button>
+            </div>
+
+            <button class="btn">Login</button>
+        </form>
+        <p class="text">Don't have an account? <a href="#">Register</a></p>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>

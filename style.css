@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+body {
+    background: steelblue;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-container {
+    background: rgba(0,0,0,0.5);
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 5px;
+}
+
+.form-container i {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.form-container p {
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
+}
+
+.form-container a {
+    text-decoration: none;
+    color: lightblue ;
+    transition: color .5s;
+}
+
+.form-container a:hover,
+.form-container a:active {
+    color: rgba(173, 216, 230, 0.5);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-control {
+    position: relative;
+    
+}
+
+.form-control input {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+    outline: 0;
+    border-bottom-color: lightblue;
+}
+
+.form-control label {
+    position: absolute;
+    top: 1rem;
+    left: 0;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 1.1rem;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-1.9rem);
+}
+
+.form-control .seeBtn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.form-control .seeBtn:active {
+    transform: scale(0.98);
+}
+
+.form-control .seeBtn.show {
+    display: block;
+}
+
+
+.btn {
+    width: 100%;
+    background: lightblue;
+    color: rgb(0,0,0);
+    border: none;
+    border-radius: 5px;
+    padding: 0.8rem 0;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
