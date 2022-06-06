@@ -16,13 +16,26 @@ seeButton.addEventListener('click',()=>{
     passwordEl.setAttribute("type", type)
 })
 
-passwordEl.addEventListener('input',()=>{
+passwordEl.addEventListener('input',(e)=>{
     if (passwordEl.value === ''){
         seeButton.classList.remove('show')
     } else {
         seeButton.classList.add('show')
     }
 
-    checkPassword()
+    checkPassword(e.target.value)
 })
+
+function checkPassword(input){
+    let check = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/;
+    //check variable checks if the password contains
+    // at least one number, one uppercase, one lowercase 
+    // and also between 6 to 10 length
+
+    if (input.match(check)){
+        submitButton.disabled = false
+    } else {
+        submitButton.disabled = true
+    }
+}
 

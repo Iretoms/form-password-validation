@@ -127,3 +127,9 @@ form {
 .btn:active {
     transform: scale(0.98);
 }
+
+.btn:disabled {
+    cursor: not-allowed;
+    background-color: grey;
+    color: white;
+}
